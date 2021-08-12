@@ -1,4 +1,5 @@
 import { newLayout } from "./Layout/newLayout"
+import { DisplayProject } from "./Layout/projectDisplay"
 import { addProject } from "./Layout/project"
 import './style.css'
 
@@ -16,3 +17,5 @@ page.style.height = "100%"
 
 
 page.appendChild(newLayout)
+
+DisplayProject()

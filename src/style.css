@@ -9,7 +9,7 @@ nav {
     width: 20%;
     height: 100%;
     background-color: yellow;
-    border-right: 7px solid brown;
+    border-right: 4px solid brown;
 }
 
 main {
@@ -18,10 +18,18 @@ main {
 }
 
 header {
+    display: flex;
     height: 15%;
     width: 100%;
     border-bottom: solid;
     box-sizing: border-box;
+}
+
+.header-title {
+    align-self: center;
+    margin-left: 50px;
+    font-size: xx-large;
+    
 }
 
 section {

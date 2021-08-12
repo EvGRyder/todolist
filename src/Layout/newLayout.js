@@ -9,7 +9,11 @@
     let header = document.createElement('header')
     let section = document.createElement('section')
 
+    let headerTitle = document.createElement('div')
+    headerTitle.classList.add("header-title")
+
     workingDiv.appendChild(sidebar)
+    header.appendChild(headerTitle)
     main.appendChild(header)
 
     main.appendChild(section)

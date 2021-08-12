@@ -13,7 +13,9 @@ import { newLayout } from "./newLayout"
 
      let addTodo = (todo) => todoList.push(todo)
 
-     return { projectData, addTodo }
+     let getData = () => projectData
+
+     return { getData, addTodo }
  }
 
  export { Project }
