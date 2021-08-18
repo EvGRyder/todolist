@@ -1,12 +1,14 @@
 import { newLayout } from "./newLayout"
-import { DisplayProject } from "./projectDisplay"
-import { addProject } from "./project"
-import { Todo } from "./todos"
-import { Project } from "./project"
-import { Sidebar } from "./sidebar"
-import { SidebarDisplay } from "./sidebarDisplay"
+
+import { Todo } from "./todo/todos"
+
+import { Project } from "./project/project"
+import { DisplayProject } from "./project/projectDisplay"
+
+import { Sidebar } from "./sidebar/sidebar"
+import { SidebarDisplay } from "./sidebar/sidebarDisplay"
+
 import './style.css'
-import { lowerFirst } from "lodash"
 
 
 
@@ -23,34 +25,25 @@ page.style.height = "100%"
 
 page.appendChild(newLayout)
 
-let testToto = Todo("title", "description", "dueDate", "Urgency")
-let testToto2 = Todo("title2", "description2", "dueDate2", "Urgency2")
+let testToto = Todo("title", "description", "dueDate", "high")
+let testToto2 = Todo("title2", "description2", "dueDate2", "medium")
+let testToto3 = Todo("title3", "description3", "dueDate3", "low")
 
 let testProject = Project("Project Title", "Current description for this project")
 testProject.addTodo(testToto)
 testProject.addTodo(testToto2)
 testProject.addTodo(testToto2)
-testProject.addTodo(testToto2)
-testProject.addTodo(testToto2)
-testProject.addTodo(testToto2)
-testProject.addTodo(testToto2)
-testProject.addTodo(testToto2)
-testProject.addTodo(testToto2)
-testProject.addTodo(testToto2)
-testProject.addTodo(testToto2)
-testProject.addTodo(testToto2)
-testProject.addTodo(testToto2)
-testProject.addTodo(testToto2)
-testProject.addTodo(testToto2)
-testProject.addTodo(testToto2)
+testProject.addTodo(testToto3)
+
 
 let testProject2 = Project("Project Title2", "Current description for this project")
 testProject2.addTodo(testToto)
 testProject2.addTodo(testToto2)
 
-let testSidebar = Sidebar()
+let testSidebar = Sidebar
 testSidebar.addProject(testProject)
 testSidebar.addProject(testProject2)
+
 
 SidebarDisplay(testSidebar)
 

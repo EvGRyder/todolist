@@ -1,9 +1,13 @@
+import { addProject } from "./addProject/addProject"
 
  const newLayout = (() => {
     let workingDiv = document.createElement('div')
     workingDiv.classList.add('page')
 
     let sidebar = document.createElement('nav')
+
+    // Project Adder Component
+    sidebar.appendChild(addProject)
 
     let main = document.createElement('main')
     let header = document.createElement('header')
@@ -26,6 +30,7 @@
     workingDiv.appendChild(main)
 
     return workingDiv
+
  })()
 
  export { newLayout }

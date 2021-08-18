@@ -5,7 +5,8 @@
      let projectData = {
          "title": title,
          "description": description,
-         "todoList": []
+         "todoList": [],
+         "id": Math.floor(Math.random() * 99999)
      }
 
      let addTodo = (todo) => projectData.todoList.push(todo)
